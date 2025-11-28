@@ -763,14 +763,15 @@
     const city = 'Bandung'; // << GANTI NAMA KOTA ANDA
     // Konstruksi URL yang BENAR menggunakan Template Literal (backtick: `)
     const apiUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
-    fetch(apiUrl)
-        .then(response => {
-            if (!response.ok) {
-                // Memberi pesan kesalahan jika API Key/Kota salah
-                throw new Error(`HTTP error! Status: ${response.status}. Cek kembali API Key dan nama kota.`);
-            }
-            return response.json();
-        })
+  fetch(apiUrl)
+    .then(response => {
+        console.log("Status:", response.status);
+        if (!response.ok) {
+            throw new Error(`Status: ${response.status}`);
+        }
+        return response.json();
+    })
+
         .then(data => {
             // Ambil data yang diperlukan
             const suhu = data.main.temp;
@@ -785,6 +786,7 @@
             document.getElementById("cuaca").innerText = `Gagal mengambil data. (${error.message})`;
             console.error(error);
         });
+    
 </script>
 
 

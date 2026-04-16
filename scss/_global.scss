@@ -28,6 +28,12 @@ a {
   }
 }
 
+body.sidebar-toggled {
+  #wrapper #content-wrapper {
+    margin-left: 0;
+  }
+}
+
 // Set container padding to match gutter width instead of default 15px
 .container,
 .container-fluid {

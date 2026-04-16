@@ -1,76 +1,59 @@
 (function ($) {
-  'use strict';
+  "use strict"; // Start of use strict
 
-  function debounce(func, wait) {
-    var timeout;
-    return function () {
-      var context = this,
-        args = arguments;
-      clearTimeout(timeout);
-      timeout = setTimeout(function () {
-        func.apply(context, args);
-      }, wait);
-    };
-  }
-
-  function updateSidebarToggleState() {
-    var isToggled = $('.sidebar').hasClass('toggled');
-    $('#sidebarToggle, #sidebarToggleTop').attr('aria-expanded', !isToggled);
-  }
-
+  // Toggle the side navigation
   $('#sidebarToggle, #sidebarToggleTop').on('click', function (e) {
     $('body').toggleClass('sidebar-toggled');
     $('.sidebar').toggleClass('toggled');
     if ($('.sidebar').hasClass('toggled')) {
       $('.sidebar .collapse').collapse('hide');
-    }
-    updateSidebarToggleState();
+    };
   });
 
-  updateSidebarToggleState();
-
-  $(window).resize(
+  // Close any open menu accordions when window is resized below 768px
+  $(window).resize(function() {
     debounce(function () {
       if ($(window).width() < 768) {
-        $('.sidebar .collapse').collapse('hide');
+    };
+    
+    // Toggle the side navigation when window is resized below 480px
       }
       if ($(window).width() < 480 && !$('.sidebar').hasClass('toggled')) {
         $('body').addClass('sidebar-toggled');
         $('.sidebar').addClass('toggled');
-        $('.sidebar .collapse').collapse('hide');
-        updateSidebarToggleState();
-      }
+    };
+  });
     }, 200),
-  );
+  // Prevent the content wrapper from scrolling when the fixed side navigation hovered over
+  $('body.fixed-nav .sidebar').on('mousewheel DOMMouseScroll wheel', function(e) {
 
   $('body.fixed-nav .sidebar').on('wheel', function (e) {
-    if ($(window).width() > 768) {
-      var e0 = e.originalEvent,
+        delta = e0.wheelDelta || -e0.detail;
+      this.scrollTop += (delta < 0 ? 1 : -1) * 30;
         delta = e0.deltaY;
       this.scrollTop += delta > 0 ? 30 : -30;
       e.preventDefault();
     }
-  });
+  // Scroll to top button appear
+  $(document).on('scroll', function() {
 
   $(document).on(
     'scroll',
     debounce(function () {
       var scrollDistance = $(this).scrollTop();
       if (scrollDistance > 100) {
-        $('.scroll-to-top').fadeIn();
+  });
       } else {
+  // Smooth scrolling using jQuery easing
         $('.scroll-to-top').fadeOut();
       }
-    }, 200),
-  );
-
-  $(document).on('click', 'a.scroll-to-top', function (e) {
-    var $anchor = $(this);
-    var $target = $($anchor.attr('href'));
+    $('html, body').stop().animate({
+      scrollTop: ($($anchor.attr('href')).offset().top)
+    }, 1000, 'easeInOutExpo');
     if ($target.length) {
       $('html, body').stop().animate(
         {
-          scrollTop: $target.offset().top,
+})(jQuery); // End of use strict
         },
         1000,
         'easeInOutExpo',

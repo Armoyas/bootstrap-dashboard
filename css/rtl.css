@@ -1,0 +1,165 @@
+/* ============================================================
+   RTL + Vazirmatn fixes for Bootstrap SB-Admin-2 dashboard
+   Author: Hermes Agent
+   Date:   2026-08-31
+   ============================================================ */
+
+/* --- 1. Remove Nunito override in RTL pages ---
+   The Nunito Google Font link is still loaded in <heade>
+   but Vazirmatn should be the primary body font.
+   These extra !important rules force Vazirmatn on all key elements
+   so that any leftover Nunito rules don't cause English-looking text. */
+
+body,
+.btn,
+.navbar-brand .text,
+.sidebar-brand-text,
+.sidebar-heading,
+.sidebar .nav-link,
+.card,
+.card-header,
+.card-body,
+.table,
+.table td,
+.table th,
+.dropdown-menu,
+.form-control,
+.form-label,
+.alert,
+.badge,
+.nav-tabs,
+.nav-pills,
+.page-header,
+.lead,
+h1, h2, h3, h4, h5, h6,
+.footer,
+.sidebar-footer {
+    font-family: "Vazirmatn", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* --- 2. Right-side off-canvas menu ---
+   When sidebar collapses (lg breakpoint), the right-menu overlay
+   slides in from the right. This container is positioned fixed and
+   slides in via the .show class. */
+
+.offcanvas-rightmenu {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 320px;
+    height: 100vh;
+    background: #212529;
+    z-index: 1050;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    overflow-y: auto;
+    box-shadow: -4px 0 16px rgba(0,0,0,0.4);
+}
+
+.offcanvas-rightmenu.show {
+    transform: translateX(0);
+}
+
+/* The dark overlay behind the right menu */
+.offcanvas-backdrop {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(0,0,0,0.5);
+    z-index: 1040;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.offcanvas-backdrop.show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+/* Improve readability of right-menu Persian labels */
+.offcanvas-rightmenu .menu-label {
+    display: block;
+    padding: 12px 16px;
+    font-size: 0.9rem;
+    color: #adb5bd;
+    transition: background 0.15s ease, color 0.15s ease;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.offcanvas-rightmenu .menu-label:hover {
+    background: #373b3e;
+    color: #fff;
+}
+
+.offcanvas-rightmenu .menu-label.active {
+    background: #0d6efd;
+    color: #fff;
+    font-weight: 600;
+}
+
+.offcanvas-rightmenu .menu-section-label {
+    font-size: 0.7rem;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: #6c757d;
+    padding: 16px 16px 4px;
+    font-weight: 600;
+}
+
+/* --- 3. Custom scrollbar so it doesn't overlap content in RTL --- */
+html {
+    overflow-y: scroll;
+}
+
+body {
+    scrollbar-width: thin;
+    scrollbar-color: rgba(0,0,0,0.3) transparent;
+}
+
+/* For Firefox */
+body {
+    scrollbar-width: 8px;
+    scrollbar-color: rgba(0,0,0,0.3) rgba(0,0,0,0.05);
+}
+
+/* For Webkit browsers (Chrome, Edge, Safari) */
+::-webkit-scrollbar {
+    width: 8px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: rgba(0,0,0,0.05);
+}
+
+::-webkit-scrollbar-thumb {
+    background: rgba(0,0,0,0.3);
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: rgba(0,0,0,0.5);
+}
+
+/* In RTL mode, scrollbar should appear on the left side.
+   Modern browsers do this automatically for RTL pages,
+   but older ones may need explicit direction. */
+html[dir="rtl"] ::-webkit-scrollbar {
+    direction: rtl;
+}
+
+/* --- 4. Ensure content doesn't get hidden behind fixed header --- */
+body {
+    padding-top: 56px; /* typical navbar height */
+}
+
+@media (max-width: 991px) {
+    body {
+        padding-top: 0;
+    }
+}

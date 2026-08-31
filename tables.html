@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fa" dir="rtl">
 
 <head>
 
@@ -9,19 +9,23 @@
     <meta name="description" content="">
     <meta name="author" content="">
 
-    <title>SB Admin 2 - Tables</title>
+    <title>اس‌بی ادمین ۲ - جداول</title>
+    <link href="https://fonts.googleapis.com/css2?family=Alam:wght@400;700&family=Nawa:wght@400;600;700&family=Sahel:wght@400;500;600;700&family=Shabnam:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap" rel="stylesheet">
+
 
     <!-- Custom fonts for this template -->
     <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet" type="text/css">
-    <link
-        href="https://fonts.googleapis.com/css?family=Nunito:200,200i,300,300i,400,400i,600,600i,700,700i,800,800i,900,900i"
+<link
+        href="https://fonts.googleapis.com/css2?family=Alam:wght@400;700&family=Nawa:wght@400;600;700&family=Sahel:wght@400;500;600;700&family=Shabnam:wght@400;500;600;700&family=Tajawal:wght@200;300;400;500;700;800&family=Vazirmatn:wght@200;300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+
 
     <!-- Custom styles for this template -->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
+    <link href="css/rtl.css" rel="stylesheet">
 
     <!-- Custom styles for this page -->
-    <link href="vendor/datatables/dataTables.bootstrap4.min.css" rel="stylesheet">
+    <link href="vendor/datatables/dataجداول.bootstrap4.min.css" rel="stylesheet">
 
 </head>
 
@@ -38,7 +42,7 @@
                 <div class="sidebar-brand-icon rotate-n-15">
                     <i class="fas fa-laugh-wink"></i>
                 </div>
-                <div class="sidebar-brand-text mx-3">SB Admin <sup>2</sup></div>
+                <div class="sidebar-brand-text mx-3">مدیریت <sup>۲</sup></div>
             </a>
 
             <!-- Divider -->
@@ -48,7 +52,7 @@
             <li class="nav-item">
                 <a class="nav-link" href="index.html">
                     <i class="fas fa-fw fa-tachometer-alt"></i>
-                    <span>Dashboard</span></a>
+                    <span>پنل مدیریت</span></a>
             </li>
 
             <!-- Divider -->
@@ -56,7 +60,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Interface
+                رابط کاربری
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -64,32 +68,32 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseTwo"
                     aria-expanded="true" aria-controls="collapseTwo">
                     <i class="fas fa-fw fa-cog"></i>
-                    <span>Components</span>
+                    <span>ابزارها</span>
                 </a>
                 <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Components:</h6>
-                        <a class="collapse-item" href="buttons.html">Buttons</a>
-                        <a class="collapse-item" href="cards.html">Cards</a>
+                        <h6 class="collapse-header">ابزارهای سفارشی:</h6>
+                        <a class="collapse-item" href="buttons.html">دکمه‌ها</a>
+                        <a class="collapse-item" href="cards.html">کارت‌ها</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Nav Item - Utilities Collapse Menu -->
+            <!-- Nav Item - Miscellaneous Collapse Menu -->
             <li class="nav-item">
-                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseUtilities"
-                    aria-expanded="true" aria-controls="collapseUtilities">
+                <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapseMiscellaneous"
+                    aria-expanded="true" aria-controls="collapseMiscellaneous">
                     <i class="fas fa-fw fa-wrench"></i>
-                    <span>Utilities</span>
+                    <span>تنوع</span>
                 </a>
-                <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
+                <div id="collapseMiscellaneous" class="collapse" aria-labelledby="headingMiscellaneous"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Custom Utilities:</h6>
-                        <a class="collapse-item" href="utilities-color.html">Colors</a>
-                        <a class="collapse-item" href="utilities-border.html">Borders</a>
-                        <a class="collapse-item" href="utilities-animation.html">Animations</a>
-                        <a class="collapse-item" href="utilities-other.html">Other</a>
+                        <h6 class="collapse-header">سایر سفارشی:</h6>
+                        <a class="collapse-item" href="utilities-color.html">رنگ‌ها</a>
+                        <a class="collapse-item" href="utilities-border.html">مرزها</a>
+                        <a class="collapse-item" href="utilities-animation.html">انیمیشن‌ها</a>
+                        <a class="collapse-item" href="utilities-other.html">سایر</a>
                     </div>
                 </div>
             </li>
@@ -99,7 +103,7 @@
 
             <!-- Heading -->
             <div class="sidebar-heading">
-                Addons
+                افزودن‌ها
             </div>
 
             <!-- Nav Item - Pages Collapse Menu -->
@@ -107,34 +111,34 @@
                 <a class="nav-link collapsed" href="#" data-toggle="collapse" data-target="#collapsePages"
                     aria-expanded="true" aria-controls="collapsePages">
                     <i class="fas fa-fw fa-folder"></i>
-                    <span>Pages</span>
+                    <span>صفحات</span>
                 </a>
                 <div id="collapsePages" class="collapse" aria-labelledby="headingPages" data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <h6 class="collapse-header">Login Screens:</h6>
-                        <a class="collapse-item" href="login.html">Login</a>
-                        <a class="collapse-item" href="register.html">Register</a>
-                        <a class="collapse-item" href="forgot-password.html">Forgot Password</a>
+                        <h6 class="collapse-header">صفحات ورود:</h6>
+                        <a class="collapse-item" href="login.html">ورود</a>
+                        <a class="collapse-item" href="register.html">ثبت‌نام</a>
+                        <a class="collapse-item" href="forgot-password.html">رمز فراموشی</a>
                         <div class="collapse-divider"></div>
-                        <h6 class="collapse-header">Other Pages:</h6>
-                        <a class="collapse-item" href="404.html">404 Page</a>
-                        <a class="collapse-item" href="blank.html">Blank Page</a>
+                        <h6 class="collapse-header">سایر صفحات:</h6>
+                        <a class="collapse-item" href="404.html">صفحه ۴۰۴</a>
+                        <a class="collapse-item" href="blank.html">صفحه خالی</a>
                     </div>
                 </div>
             </li>
 
-            <!-- Nav Item - Charts -->
+            <!-- Nav Item - نمودارها -->
             <li class="nav-item">
                 <a class="nav-link" href="charts.html">
                     <i class="fas fa-fw fa-chart-area"></i>
-                    <span>Charts</span></a>
+                    <span>نمودارها</span></a>
             </li>
 
-            <!-- Nav Item - Tables -->
+            <!-- Nav Item - جداول -->
             <li class="nav-item active">
                 <a class="nav-link" href="tables.html">
                     <i class="fas fa-fw fa-table"></i>
-                    <span>Tables</span></a>
+                    <span>جداول</span></a>
             </li>
 
             <!-- Divider -->
@@ -168,8 +172,8 @@
                     <form
                         class="d-none d-sm-inline-block form-inline mr-auto ml-md-3 my-2 my-md-0 mw-100 navbar-search">
                         <div class="input-group">
-                            <input type="text" class="form-control bg-light border-0 small" placeholder="Search for..."
-                                aria-label="Search" aria-describedby="basic-addon2">
+                            <input type="text" class="form-control bg-light border-0 small" placeholder="جستجو..."
+                                aria-label="جستجو" aria-describedby="basic-addon2">
                             <div class="input-group-append">
                                 <button class="btn btn-primary" type="button">
                                     <i class="fas fa-search fa-sm"></i>
@@ -193,7 +197,7 @@
                                 <form class="form-inline mr-auto w-100 navbar-search">
                                     <div class="input-group">
                                         <input type="text" class="form-control bg-light border-0 small"
-                                            placeholder="Search for..." aria-label="Search"
+                                            placeholder="جستجو..." aria-label="جستجو"
                                             aria-describedby="basic-addon2">
                                         <div class="input-group-append">
                                             <button class="btn btn-primary" type="button">
@@ -205,19 +209,19 @@
                             </div>
                         </li>
 
-                        <!-- Nav Item - Alerts -->
+                        <!-- Nav Item - پیام‌های اطلاعاتی -->
                         <li class="nav-item dropdown no-arrow mx-1">
                             <a class="nav-link dropdown-toggle" href="#" id="alertsDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
                                 <i class="fas fa-bell fa-fw"></i>
-                                <!-- Counter - Alerts -->
+                                <!-- Counter - پیام‌های اطلاعاتی -->
                                 <span class="badge badge-danger badge-counter">3+</span>
                             </a>
-                            <!-- Dropdown - Alerts -->
+                            <!-- Dropdown - پیام‌های اطلاعاتی -->
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="alertsDropdown">
                                 <h6 class="dropdown-header">
-                                    Alerts Center
+                                    مرکز هشدارها
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="mr-3">
@@ -226,8 +230,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 12, 2019</div>
-                                        <span class="font-weight-bold">A new monthly report is ready to download!</span>
+                                        <div class="small text-gray-500">دسامبر 12, 2019</div>
+                                        <span class="font-weight-bold">فروشگاه ماهانه جدید برای دانلود آماده است!</span>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -237,8 +241,8 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 7, 2019</div>
-                                        $290.29 has been deposited into your account!
+                                        <div class="small text-gray-500">دسامبر 7, 2019</div>
+                                        ۲۹۰.۲۹ دلار به حساب شما واریز شد!
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -248,11 +252,11 @@
                                         </div>
                                     </div>
                                     <div>
-                                        <div class="small text-gray-500">December 2, 2019</div>
-                                        Spending Alert: We've noticed unusually high spending for your account.
+                                        <div class="small text-gray-500">دسامبر 2, 2019</div>
+                                        هشدار هزینه: هزینه‌های غیرمعمول برای حساب شما ثبت شده است.
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Show All Alerts</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">نمایش همه راورها</a>
                             </div>
                         </li>
 
@@ -268,7 +272,7 @@
                             <div class="dropdown-list dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="messagesDropdown">
                                 <h6 class="dropdown-header">
-                                    Message Center
+                                    مرکز پیام‌ها
                                 </h6>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
                                     <div class="dropdown-list-image mr-3">
@@ -277,9 +281,9 @@
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div class="font-weight-bold">
-                                        <div class="text-truncate">Hi there! I am wondering if you can help me with a
+                                        <div class="text-truncate">سلام! می‌خواهم بدانم آیا می‌توانید در موضوعی که با آن روبرو هستم کمک کنید
                                             problem I've been having.</div>
-                                        <div class="small text-gray-500">Emily Fowler · 58m</div>
+                                        <div class="small text-gray-500">امیلی فولر · ۵۸ دقیقه</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -289,9 +293,8 @@
                                         <div class="status-indicator"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">I have the photos that you ordered last month, how
-                                            would you like them sent to you?</div>
-                                        <div class="small text-gray-500">Jae Chun · 1d</div>
+                                        <div class="text-truncate">عکس‌های سفارش آخر ماه را دارم. چگونه برای شما بفرستم؟</div>
+                                        <div class="small text-gray-500">جای چان · ۱ روز</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -301,9 +304,9 @@
                                         <div class="status-indicator bg-warning"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">Last month's report looks great, I am very happy with
-                                            the progress so far, keep up the good work!</div>
-                                        <div class="small text-gray-500">Morgan Alvarez · 2d</div>
+                                        <div class="text-truncate">گزارش ماه گذشته عالی بود، خیلی خوشحالم و
+                                            پیشرفت خوب ادامه بده!</div>
+                                        <div class="small text-gray-500">مورگان آلفارز · ۲ روز</div>
                                     </div>
                                 </a>
                                 <a class="dropdown-item d-flex align-items-center" href="#">
@@ -313,44 +316,44 @@
                                         <div class="status-indicator bg-success"></div>
                                     </div>
                                     <div>
-                                        <div class="text-truncate">Am I a good boy? The reason I ask is because someone
-                                            told me that people say this to all dogs, even if they aren't good...</div>
-                                        <div class="small text-gray-500">Chicken the Dog · 2w</div>
+                                        <div class="text-truncate">من یک سگ خوبم؟ دلیل پرسیدن این است که کسی
+                                            به من گفت مردم این را به همه سگ‌ها می‌گویند، حتی اگر خوب نیستند't good...</div>
+                                        <div class="small text-gray-500">ماکل اسب · ۲ هفته</div>
                                     </div>
                                 </a>
-                                <a class="dropdown-item text-center small text-gray-500" href="#">Read More Messages</a>
+                                <a class="dropdown-item text-center small text-gray-500" href="#">خواندن بیشتر پیام‌ها</a>
                             </div>
                         </li>
 
                         <div class="topbar-divider d-none d-sm-block"></div>
 
-                        <!-- Nav Item - User Information -->
+                        <!-- Nav Item - User رنگ اطلاع‌رسانیrmation -->
                         <li class="nav-item dropdown no-arrow">
                             <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
                                 data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">Douglas McGee</span>
+                                <span class="mr-2 d-none d-lg-inline text-gray-600 small">دگلاس맥جی</span>
                                 <img class="img-profile rounded-circle"
                                     src="img/undraw_profile.svg">
                             </a>
-                            <!-- Dropdown - User Information -->
+                            <!-- Dropdown - User رنگ اطلاع‌رسانیrmation -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Profile
+                                    پروفایل
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-cogs fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Settings
+                                    تنظیمات
                                 </a>
                                 <a class="dropdown-item" href="#">
                                     <i class="fas fa-list fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Activity Log
+                                    گزارش فعالیت
                                 </a>
                                 <div class="dropdown-divider"></div>
                                 <a class="dropdown-item" href="#" data-toggle="modal" data-target="#logoutModal">
                                     <i class="fas fa-sign-out-alt fa-sm fa-fw mr-2 text-gray-400"></i>
-                                    Logout
+                                    خروج
                                 </a>
                             </div>
                         </li>
@@ -364,492 +367,481 @@
                 <div class="container-fluid">
 
                     <!-- Page Heading -->
-                    <h1 class="h3 mb-2 text-gray-800">Tables</h1>
-                    <p class="mb-4">DataTables is a third party plugin that is used to generate the demo table below.
-                        For more information about DataTables, please visit the <a target="_blank"
-                            href="https://datatables.net">official DataTables documentation</a>.</p>
+                    <h1 class="h3 mb-2 text-gray-800">جداول</h1>
+                    <p class="mb-4">جدول‌دات یک پلاگین شخص ثالث است که برای تولید جدول نمونه در ادامه استفاده شده است.
+                        برای اطلاعات بیشتر درباره جدول‌دات، لطفاً به <a target="_blank"
+                            href="https://datatables.net">مستندات رسمی جدول‌دات</a>.</p>
 
                     <!-- DataTales Example -->
                     <div class="card shadow mb-4">
                         <div class="card-header py-3">
-                            <h6 class="m-0 font-weight-bold text-primary">DataTables Example</h6>
+                            <h6 class="m-0 font-weight-bold text-primary">جدول‌دات مثال</h6>
                         </div>
                         <div class="card-body">
                             <div class="table-responsive">
-                                <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+                                <table class="table table-bordered" id="dataجدول" width="100%" cellspacing="0">
                                     <thead>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>نام</th>
+                                            <th>سمت</th>
+                                            <th>دفتر</th>
+                                            <th>سن</th>
+                                            <th>تاریخ شروع</th>
+                                            <th>مزایده</th>
                                         </tr>
                                     </thead>
                                     <tfoot>
                                         <tr>
-                                            <th>Name</th>
-                                            <th>Position</th>
-                                            <th>Office</th>
-                                            <th>Age</th>
-                                            <th>Start date</th>
-                                            <th>Salary</th>
+                                            <th>نام</th>
+                                            <th>سمت</th>
+                                            <th>دفتر</th>
+                                            <th>سن</th>
+                                            <th>تاریخ شروع</th>
+                                            <th>مزایده</th>
                                         </tr>
                                     </tfoot>
                                     <tbody>
                                         <tr>
-                                            <td>Tiger Nixon</td>
-                                            <td>System Architect</td>
-                                            <td>Edinburgh</td>
+                                            <td>تایگر نیکسون</td>
+                                            <td>معماري سیستم‌ها</td>
+                                            <td>ادینبورگ</td>
                                             <td>61</td>
                                             <td>2011/04/25</td>
                                             <td>$320,800</td>
                                         </tr>
                                         <tr>
-                                            <td>Garrett Winters</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
+                                            <td>گارات وینترز</td>
+                                            <td>سررسیدچی</td>
+                                            <td>توکیو</td>
                                             <td>63</td>
                                             <td>2011/07/25</td>
                                             <td>$170,750</td>
                                         </tr>
                                         <tr>
-                                            <td>Ashton Cox</td>
-                                            <td>Junior Technical Author</td>
-                                            <td>San Francisco</td>
+                                            <td>آشتون کک्स</td>
+                                            <td>نویسنده تکنیکال</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>66</td>
                                             <td>2009/01/12</td>
                                             <td>$86,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Cedric Kelly</td>
-                                            <td>Senior Javascript Developer</td>
-                                            <td>Edinburgh</td>
+                                            <td>سدریک کیلی</td>
+                                            <td>توسعه‌دهنده جاوااسکریپت با تجربه</td>
+                                            <td>ادینبورگ</td>
                                             <td>22</td>
                                             <td>2012/03/29</td>
                                             <td>$433,060</td>
                                         </tr>
                                         <tr>
-                                            <td>Airi Satou</td>
-                                            <td>Accountant</td>
-                                            <td>Tokyo</td>
+                                            <td>آیری ساتو</td>
+                                            <td>سررسیدچی</td>
+                                            <td>توکیو</td>
                                             <td>33</td>
                                             <td>2008/11/28</td>
                                             <td>$162,700</td>
                                         </tr>
                                         <tr>
-                                            <td>Brielle Williamson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>New York</td>
+                                            <td>بریویل ول리엄سون</td>
+                                            <td>متخصص ادغام</td>
+                                            <td>نیویورک</td>
                                             <td>61</td>
                                             <td>2012/12/02</td>
                                             <td>$372,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Herrod Chandler</td>
-                                            <td>Sales Assistant</td>
-                                            <td>San Francisco</td>
+                                            <td>هرود چاندر</td>
+                                            <td>دستیار فروش</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>59</td>
                                             <td>2012/08/06</td>
                                             <td>$137,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Rhona Davidson</td>
-                                            <td>Integration Specialist</td>
-                                            <td>Tokyo</td>
+                                            <td>رونا داویدسون</td>
+                                            <td>متخصص ادغام</td>
+                                            <td>توکیو</td>
                                             <td>55</td>
                                             <td>2010/10/14</td>
                                             <td>$327,900</td>
                                         </tr>
                                         <tr>
-                                            <td>Colleen Hurst</td>
-                                            <td>Javascript Developer</td>
-                                            <td>San Francisco</td>
+                                            <td>کولین هاست</td>
+                                            <td>توسعه‌دهنده جاوااسکریپت</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>39</td>
                                             <td>2009/09/15</td>
                                             <td>$205,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Sonya Frost</td>
-                                            <td>Software Engineer</td>
-                                            <td>Edinburgh</td>
+                                            <td>سونیا فروست</td>
+                                            <td>مهندس نرم‌افزار</td>
+                                            <td>ادینبورگ</td>
                                             <td>23</td>
                                             <td>2008/12/13</td>
                                             <td>$103,600</td>
                                         </tr>
                                         <tr>
-                                            <td>Jena Gaines</td>
-                                            <td>Office Manager</td>
-                                            <td>London</td>
+                                            <td>جینا گینز</td>
+                                            <td>مدیر دفتر</td>
+                                            <td>لندن</td>
                                             <td>30</td>
                                             <td>2008/12/19</td>
                                             <td>$90,560</td>
                                         </tr>
                                         <tr>
-                                            <td>Quinn Flynn</td>
-                                            <td>Support Lead</td>
-                                            <td>Edinburgh</td>
+                                            <td>کوین فلاين</td>
+                                            <td>سرپرست پشتیبانی</td>
+                                            <td>ادینبورگ</td>
                                             <td>22</td>
                                             <td>2013/03/03</td>
                                             <td>$342,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Charde Marshall</td>
-                                            <td>Regional Director</td>
-                                            <td>San Francisco</td>
+                                            <td>شارد مارشال</td>
+                                            <td>مدیر منطقه‌ای</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>36</td>
                                             <td>2008/10/16</td>
                                             <td>$470,600</td>
                                         </tr>
                                         <tr>
-                                            <td>Haley Kennedy</td>
-                                            <td>Senior Marketing Designer</td>
-                                            <td>London</td>
+                                            <td>هلکی کندی</td>
+                                            <td>طراح بازاریابی با تجربه</td>
+                                            <td>لندن</td>
                                             <td>43</td>
                                             <td>2012/12/18</td>
                                             <td>$313,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Tatyana Fitzpatrick</td>
-                                            <td>Regional Director</td>
-                                            <td>London</td>
+                                            <td>تاتیانا فیتزپاتریک</td>
+                                            <td>مدیر منطقه‌ای</td>
+                                            <td>لندن</td>
                                             <td>19</td>
                                             <td>2010/03/17</td>
                                             <td>$385,750</td>
                                         </tr>
                                         <tr>
-                                            <td>Michael Silva</td>
-                                            <td>Marketing Designer</td>
-                                            <td>London</td>
+                                            <td>میشل سیلوا</td>
+                                            <td>طراح بازاریابی</td>
+                                            <td>لندن</td>
                                             <td>66</td>
                                             <td>2012/11/27</td>
                                             <td>$198,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Paul Byrd</td>
-                                            <td>Chief Financial Officer (CFO)</td>
-                                            <td>New York</td>
+                                            <td>پال برد</td>
+                                            <td>مدیر مالی عالی</td>
+                                            <td>نیویورک</td>
                                             <td>64</td>
                                             <td>2010/06/09</td>
                                             <td>$725,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Gloria Little</td>
-                                            <td>Systems Administrator</td>
-                                            <td>New York</td>
+                                            <td>گلورا لیتل</td>
+                                            <td>مدیر سیستم‌ها</td>
+                                            <td>نیویورک</td>
                                             <td>59</td>
                                             <td>2009/04/10</td>
                                             <td>$237,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Bradley Greer</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
+                                            <td>بردلی گرر</td>
+                                            <td>مهندس نرم‌افزار</td>
+                                            <td>لندن</td>
                                             <td>41</td>
                                             <td>2012/10/13</td>
                                             <td>$132,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Dai Rios</td>
-                                            <td>Personnel Lead</td>
-                                            <td>Edinburgh</td>
+                                            <td>دی ریوس</td>
+                                            <td>رهبر پرسنلی</td>
+                                            <td>ادینبورگ</td>
                                             <td>35</td>
                                             <td>2012/09/26</td>
                                             <td>$217,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Jenette Caldwell</td>
-                                            <td>Development Lead</td>
-                                            <td>New York</td>
+                                            <td>جنت کالدول</td>
+                                            <td>رهبر توسعه</td>
+                                            <td>نیویورک</td>
                                             <td>30</td>
                                             <td>2011/09/03</td>
                                             <td>$345,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Yuri Berry</td>
-                                            <td>Chief Marketing Officer (CMO)</td>
-                                            <td>New York</td>
+                                            <td>یوریبری</td>
+                                            <td>مدیر بازاریابی عالی</td>
+                                            <td>نیویورک</td>
                                             <td>40</td>
                                             <td>2009/06/25</td>
                                             <td>$675,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Caesar Vance</td>
-                                            <td>Pre-Sales Support</td>
-                                            <td>New York</td>
+                                            <td>کیسر ونس</td>
+                                            <td>پشتیبانی قبل از فروش</td>
+                                            <td>نیویورک</td>
                                             <td>21</td>
                                             <td>2011/12/12</td>
                                             <td>$106,450</td>
                                         </tr>
                                         <tr>
-                                            <td>Doris Wilder</td>
-                                            <td>Sales Assistant</td>
-                                            <td>Sidney</td>
+                                            <td>دوریس وایلدر</td>
+                                            <td>دستیار فروش</td>
+                                            <td>سیدنی</td>
                                             <td>23</td>
                                             <td>2010/09/20</td>
                                             <td>$85,600</td>
                                         </tr>
                                         <tr>
-                                            <td>Angelica Ramos</td>
-                                            <td>Chief Executive Officer (CEO)</td>
-                                            <td>London</td>
+                                            <td>آنگلیکا راموس</td>
+                                            <td>مدیر اجرایی عالی</td>
+                                            <td>لندن</td>
                                             <td>47</td>
                                             <td>2009/10/09</td>
                                             <td>$1,200,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Gavin Joyce</td>
-                                            <td>Developer</td>
-                                            <td>Edinburgh</td>
+                                            <td>گاویان جویس</td>
+                                            <td>توسعه‌دهنده</td>
+                                            <td>ادینبورگ</td>
                                             <td>42</td>
                                             <td>2010/12/22</td>
-                                            <td>$92,575</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Jennifer Chang</td>
-                                            <td>Regional Director</td>
-                                            <td>Singapore</td>
-                                            <td>28</td>
-                                            <td>2010/11/14</td>
-                                            <td>$357,650</td>
-                                        </tr>
-                                        <tr>
-                                            <td>Brenden Wagner</td>
-                                            <td>Software Engineer</td>
-                                            <td>San Francisco</td>
+                                            <td>برندون وگنر</td>
+                                            <td>مهندس نرم‌افزار</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>28</td>
                                             <td>2011/06/07</td>
                                             <td>$206,850</td>
                                         </tr>
                                         <tr>
-                                            <td>Fiona Green</td>
-                                            <td>Chief Operating Officer (COO)</td>
-                                            <td>San Francisco</td>
+                                            <td>فایونا گرین</td>
+                                            <td>مدیرعامل عالی</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>48</td>
                                             <td>2010/03/11</td>
                                             <td>$850,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Shou Itou</td>
-                                            <td>Regional Marketing</td>
-                                            <td>Tokyo</td>
+                                            <td>شو ئیتو</td>
+                                            <td>بازاریابی منطقه‌ای</td>
+                                            <td>توکیو</td>
                                             <td>20</td>
                                             <td>2011/08/14</td>
                                             <td>$163,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Michelle House</td>
-                                            <td>Integration Specialist</td>
-                                            <td>Sidney</td>
+                                            <td>میشل هاوس</td>
+                                            <td>متخصص ادغام</td>
+                                            <td>سیدنی</td>
                                             <td>37</td>
                                             <td>2011/06/02</td>
                                             <td>$95,400</td>
                                         </tr>
                                         <tr>
-                                            <td>Suki Burks</td>
-                                            <td>Developer</td>
-                                            <td>London</td>
+                                            <td>سویی بورکس</td>
+                                            <td>توسعه‌دهنده</td>
+                                            <td>لندن</td>
                                             <td>53</td>
                                             <td>2009/10/22</td>
                                             <td>$114,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Prescott Bartlett</td>
-                                            <td>Technical Author</td>
-                                            <td>London</td>
+                                            <td>پراسکات بارتلت</td>
+                                            <td>نویسنده فنی</td>
+                                            <td>لندن</td>
                                             <td>27</td>
                                             <td>2011/05/07</td>
                                             <td>$145,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Gavin Cortez</td>
-                                            <td>Team Leader</td>
-                                            <td>San Francisco</td>
+                                            <td>گاویان کورت</td>
+                                            <td>سرپرست تیم</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>22</td>
                                             <td>2008/10/26</td>
                                             <td>$235,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Martena Mccray</td>
-                                            <td>Post-Sales support</td>
-                                            <td>Edinburgh</td>
+                                            <td>مارتنا مک‌کری</td>
+                                            <td>پشتیبانی پس از فروش</td>
+                                            <td>ادینبورگ</td>
                                             <td>46</td>
                                             <td>2011/03/09</td>
                                             <td>$324,050</td>
                                         </tr>
                                         <tr>
-                                            <td>Unity Butler</td>
-                                            <td>Marketing Designer</td>
-                                            <td>San Francisco</td>
+                                            <td>یونی باتلر</td>
+                                            <td>طراح بازاریابی</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>47</td>
                                             <td>2009/12/09</td>
                                             <td>$85,675</td>
                                         </tr>
                                         <tr>
-                                            <td>Howard Hatfield</td>
-                                            <td>Office Manager</td>
-                                            <td>San Francisco</td>
+                                            <td>هاورد هاتفیلد</td>
+                                            <td>مدیر دفتر</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>51</td>
                                             <td>2008/12/16</td>
                                             <td>$164,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Hope Fuentes</td>
-                                            <td>Secretary</td>
-                                            <td>San Francisco</td>
+                                            <td>امید فونتس</td>
+                                            <td>متصدی</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>41</td>
                                             <td>2010/02/12</td>
                                             <td>$109,850</td>
                                         </tr>
                                         <tr>
-                                            <td>Vivian Harrell</td>
-                                            <td>Financial Controller</td>
-                                            <td>San Francisco</td>
+                                            <td>وویان هارل</td>
+                                            <td>کنترلر مالی</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>62</td>
                                             <td>2009/02/14</td>
                                             <td>$452,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Timothy Mooney</td>
-                                            <td>Office Manager</td>
-                                            <td>London</td>
+                                            <td>تیموتی مونی</td>
+                                            <td>مدیر دفتر</td>
+                                            <td>لندن</td>
                                             <td>37</td>
                                             <td>2008/12/11</td>
                                             <td>$136,200</td>
                                         </tr>
                                         <tr>
-                                            <td>Jackson Bradshaw</td>
-                                            <td>Director</td>
-                                            <td>New York</td>
+                                            <td>جکسون بردشو</td>
+                                            <td>مدیر</td>
+                                            <td>نیویورک</td>
                                             <td>65</td>
                                             <td>2008/09/26</td>
                                             <td>$645,750</td>
                                         </tr>
                                         <tr>
-                                            <td>Olivia Liang</td>
-                                            <td>Support Engineer</td>
-                                            <td>Singapore</td>
+                                            <td>الیويا لی‌آنگ</td>
+                                            <td>مهندس پشتیبانی</td>
+                                            <td>سنگاپور</td>
                                             <td>64</td>
                                             <td>2011/02/03</td>
                                             <td>$234,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Bruno Nash</td>
-                                            <td>Software Engineer</td>
-                                            <td>London</td>
+                                            <td>برونو نش</td>
+                                            <td>مهندس نرم‌افزار</td>
+                                            <td>لندن</td>
                                             <td>38</td>
                                             <td>2011/05/03</td>
                                             <td>$163,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Sakura Yamamoto</td>
-                                            <td>Support Engineer</td>
-                                            <td>Tokyo</td>
+                                            <td>ساکورا یاماموتو</td>
+                                            <td>مهندس پشتیبانی</td>
+                                            <td>توکیو</td>
                                             <td>37</td>
                                             <td>2009/08/19</td>
                                             <td>$139,575</td>
                                         </tr>
                                         <tr>
-                                            <td>Thor Walton</td>
-                                            <td>Developer</td>
-                                            <td>New York</td>
+                                            <td>تور وولتن</td>
+                                            <td>توسعه‌دهنده</td>
+                                            <td>نیویورک</td>
                                             <td>61</td>
                                             <td>2013/08/11</td>
                                             <td>$98,540</td>
                                         </tr>
                                         <tr>
-                                            <td>Finn Camacho</td>
-                                            <td>Support Engineer</td>
-                                            <td>San Francisco</td>
+                                            <td>فین کاماچو</td>
+                                            <td>مهندس پشتیبانی</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>47</td>
                                             <td>2009/07/07</td>
                                             <td>$87,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Serge Baldwin</td>
-                                            <td>Data Coordinator</td>
-                                            <td>Singapore</td>
+                                            <td>سِر جی بالدوین</td>
+                                            <td>هماهنگ‌کننده داده‌ها</td>
+                                            <td>سنگاپور</td>
                                             <td>64</td>
                                             <td>2012/04/09</td>
                                             <td>$138,575</td>
                                         </tr>
                                         <tr>
-                                            <td>Zenaida Frank</td>
-                                            <td>Software Engineer</td>
-                                            <td>New York</td>
+                                            <td>زنیندا فرانک</td>
+                                            <td>مهندس نرم‌افزار</td>
+                                            <td>نیویورک</td>
                                             <td>63</td>
                                             <td>2010/01/04</td>
                                             <td>$125,250</td>
                                         </tr>
                                         <tr>
-                                            <td>Zorita Serrano</td>
-                                            <td>Software Engineer</td>
-                                            <td>San Francisco</td>
+                                            <td>زوریتا سِرانو</td>
+                                            <td>مهندس نرم‌افزار</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>56</td>
                                             <td>2012/06/01</td>
                                             <td>$115,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Jennifer Acosta</td>
-                                            <td>Junior Javascript Developer</td>
-                                            <td>Edinburgh</td>
+                                            <td>جنینفر آکوستا</td>
+                                            <td>توسعه‌دهنده جاوااسکریپت</td>
+                                            <td>ادینبورگ</td>
                                             <td>43</td>
                                             <td>2013/02/01</td>
                                             <td>$75,650</td>
                                         </tr>
                                         <tr>
-                                            <td>Cara Stevens</td>
-                                            <td>Sales Assistant</td>
-                                            <td>New York</td>
+                                            <td>کارا استیونز</td>
+                                            <td>دستیار فروش</td>
+                                            <td>نیویورک</td>
                                             <td>46</td>
                                             <td>2011/12/06</td>
                                             <td>$145,600</td>
                                         </tr>
                                         <tr>
-                                            <td>Hermione Butler</td>
-                                            <td>Regional Director</td>
-                                            <td>London</td>
+                                            <td>هرمione باتلر</td>
+                                            <td>مدیر منطقه‌ای</td>
+                                            <td>لندن</td>
                                             <td>47</td>
                                             <td>2011/03/21</td>
                                             <td>$356,250</td>
                                         </tr>
                                         <tr>
-                                            <td>Lael Greer</td>
-                                            <td>Systems Administrator</td>
-                                            <td>London</td>
+                                            <td>لئیل گریر</td>
+                                            <td>مدیر سیستم‌ها</td>
+                                            <td>لندن</td>
                                             <td>21</td>
                                             <td>2009/02/27</td>
                                             <td>$103,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Jonas Alexander</td>
-                                            <td>Developer</td>
-                                            <td>San Francisco</td>
+                                            <td>جوناها الکساندر</td>
+                                            <td>توسعه‌دهنده</td>
+                                            <td>سانفرانسیسکو</td>
                                             <td>30</td>
                                             <td>2010/07/14</td>
                                             <td>$86,500</td>
                                         </tr>
                                         <tr>
-                                            <td>Shad Decker</td>
-                                            <td>Regional Director</td>
-                                            <td>Edinburgh</td>
+                                            <td>شید دیکر</td>
+                                            <td>مدیر منطقه‌ای</td>
+                                            <td>ادینبورگ</td>
                                             <td>51</td>
                                             <td>2008/11/13</td>
                                             <td>$183,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Michael Bruce</td>
-                                            <td>Javascript Developer</td>
-                                            <td>Singapore</td>
+                                            <td>مایکل بروس</td>
+                                            <td>توسعه‌دهنده جاوااسکریپت</td>
+                                            <td>سنگاپور</td>
                                             <td>29</td>
                                             <td>2011/06/27</td>
                                             <td>$183,000</td>
                                         </tr>
                                         <tr>
-                                            <td>Donna Snider</td>
-                                            <td>Customer Support</td>
-                                            <td>New York</td>
+                                            <td>دونا سایدر</td>
+                                            <td>پشتیبانی مشتریان</td>
+                                            <td>نیویورک</td>
                                             <td>27</td>
                                             <td>2011/01/25</td>
                                             <td>$112,000</td>
@@ -870,7 +862,7 @@
             <footer class="sticky-footer bg-white">
                 <div class="container my-auto">
                     <div class="copyright text-center my-auto">
-                        <span>Copyright &copy; Your Website 2020</span>
+                        <span>کپی‌رایت &copy; سایت شما ۱۴۰۰</span>
                     </div>
                 </div>
             </footer>
@@ -887,21 +879,20 @@
         <i class="fas fa-angle-up"></i>
     </a>
 
-    <!-- Logout Modal-->
+    <!-- خروج Modal-->
     <div class="modal fade" id="logoutModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
         aria-hidden="true">
         <div class="modal-dialog" role="document">
             <div class="modal-content">
                 <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Ready to Leave?</h5>
-                    <button class="close" type="button" data-dismiss="modal" aria-label="Close">
+                    <h5 class="modal-title" id="exampleModalLabel">آماده‌ی خروجید؟</h5>
+                    <button class="close" type="button" data-dismiss="modal" aria-label="بستن">
                         <span aria-hidden="true">×</span>
                     </button>
                 </div>
-                <div class="modal-body">Select "Logout" below if you are ready to end your current session.</div>
-                <div class="modal-footer">
-                    <button class="btn btn-secondary" type="button" data-dismiss="modal">Cancel</button>
-                    <a class="btn btn-primary" href="login.html">Logout</a>
+                <div class="modal-body"> برای خروج، اینجا را کلیک کنید.    <div class="modal-footer">
+                    <button class="btn btn-secondary" type="button" data-dismiss="modal">انصراف</button>
+                    <a class="btn btn-primary" href="login.html">خروج</a>
                 </div>
             </div>
         </div>
@@ -918,8 +909,8 @@
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
-    <script src="vendor/datatables/jquery.dataTables.min.js"></script>
-    <script src="vendor/datatables/dataTables.bootstrap4.min.js"></script>
+    <script src="vendor/datatables/jquery.dataجداول.min.js"></script>
+    <script src="vendor/datatables/dataجداول.bootstrap4.min.js"></script>
 
     <!-- Page level custom scripts -->
     <script src="js/demo/datatables-demo.js"></script>

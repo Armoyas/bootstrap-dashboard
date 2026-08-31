@@ -53,4 +53,29 @@
     e.preventDefault();
   });
 
+
+  // Toggle the right-side offcanvas menu
+  $('#rightMenuToggle').on('click', function(e) {
+    e.stopPropagation();
+    $('#rightMenu').toggleClass('show');
+    $('#rightMenuBackdrop').toggleClass('show');
+    $('body').toggleClass('right-menu-open');
+  });
+
+  // Close right menu when backdrop clicked
+  $('#rightMenuBackdrop').on('click', function() {
+    $('#rightMenu').removeClass('show');
+    $('#rightMenuBackdrop').removeClass('show');
+    $('body').removeClass('right-menu-open');
+  });
+
+  // Close right menu on Escape key
+  $(document).on('keyup', function(e) {
+    if (e.key === 'Escape' && $('#rightMenu').hasClass('show')) {
+      $('#rightMenu').removeClass('show');
+      $('#rightMenuBackdrop').removeClass('show');
+      $('body').removeClass('right-menu-open');
+    }
+  });
+
 })(jQuery); // End of use strict

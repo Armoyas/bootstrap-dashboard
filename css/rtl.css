@@ -163,3 +163,36 @@ body {
         padding-top: 0;
     }
 }
+
+
+/* Prevent body scroll when right menu is open */
+body.right-menu-open {
+    overflow: hidden;
+}
+
+/* Ensure right-menu nav-link items use Vazirmatn */
+.offcanvas-rightmenu .menu-label,
+.offcanvas-rightmenu .menu-section-label,
+.offcanvas-rightmenu-header h5 {
+    font-family: "Vazirmatn", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+}
+
+/* Right menu close button hover */
+.offcanvas-rightmenu-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.offcanvas-rightmenu-close {
+    background: none;
+    border: none;
+    color: #adb5bd;
+    font-size: 1.4rem;
+    cursor: pointer;
+    padding: 0 0 0 16px;
+}
+
+.offcanvas-rightmenu-close:hover {
+    color: #fff;
+}

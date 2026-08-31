@@ -154,6 +154,30 @@
         </ul>
         <!-- End of Sidebar -->
 
+        <!-- Right Side Menu (Offcanvas) -->
+        <div class="offcanvas-backdrop" id="rightMenuBackdrop"></div>
+        <div class="offcanvas-rightmenu" id="rightMenu">
+            <div class="offcanvas-rightmenu-header p-3 border-bottom border-secondary">
+                <h5 class="m-0">منوی سریع</h5>
+            </div>
+            <div class="offcanvas-rightmenu-body p-3">
+                <div class="menu-section-label">ابزارها</div>
+                <a class="menu-label" href="charts.html"><i class="fas fa-chart-area mr-2"></i>نمودارها</a>
+                <a class="menu-label" href="tables.html"><i class="fas fa-table mr-2"></i>جداول</a>
+                <a class="menu-label" href="buttons.html"><i class="fas fa-th-large mr-2"></i>دکمه‌ها</a>
+                <a class="menu-label" href="cards.html"><i class="fas fa-credit-card mr-2"></i>کارت‌ها</a>
+                <div class="menu-section-label mt-3">صفحات</div>
+                <a class="menu-label" href="login.html"><i class="fas fa-sign-in-alt mr-2"></i>ورود</a>
+                <a class="menu-label" href="register.html"><i class="fas fa-user-plus mr-2"></i>ثبت‌نام</a>
+                <a class="menu-label" href="forgot-password.html"><i class="fas fa-key mr-2"></i>فراموشی رمز</a>
+                <a class="menu-label" href="404.html"><i class="fas fa-exclamation-triangle mr-2"></i>صفحه ۴۰۴</a>
+                <a class="menu-label" href="blank.html"><i class="fas fa-file mr-2"></i>صفحه خالی</a>
+                <div class="menu-section-label mt-3">تنظیمات</div>
+                <a class="menu-label" href="#"><i class="fas fa-cog mr-2"></i>تنظیمات</a>
+                <a class="menu-label" href="#"><i class="fas fa-user-circle mr-2"></i>پروفایل</a>
+            </div>
+        </div>
+
         <!-- Content Wrapper -->
         <div id="content-wrapper" class="d-flex flex-column">
 
@@ -166,6 +190,11 @@
                     <!-- Sidebar Toggle (Topbar) -->
                     <button id="sidebarToggleTop" class="btn btn-link d-md-none rounded-circle mr-3">
                         <i class="fa fa-bars"></i>
+                    </button>
+
+                    <!-- Right Menu Toggle -->
+                    <button id="rightMenuToggle" class="btn btn-link d-none d-md-flex rounded-circle mr-3" title="منوی سمت راست">
+                        <i class="fas fa-bars"></i>
                     </button>
 
                     <!-- Topbar Search -->

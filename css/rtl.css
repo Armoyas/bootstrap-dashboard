@@ -32,7 +32,7 @@ body,
 h1, h2, h3, h4, h5, h6,
 .footer,
 .sidebar-footer {
-    font-family: "Vazirmatn", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+    font-family: "Vazirmatn", "Tajawal", "Sahel", "Shabnam", "Alam", "Nawa", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 /* --- 1. GLOBAL: Fix text overflow in all nowrap contexts --- */
@@ -306,7 +306,7 @@ body.right-menu-open {
 .offcanvas-rightmenu .menu-label,
 .offcanvas-rightmenu .menu-section-label,
 .offcanvas-rightmenu-header h5 {
-    font-family: "Vazirmatn", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
+    font-family: "Vazirmatn", "Tajawal", "Sahel", "Shabnam", "Alam", "Nawa", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
 .offcanvas-rightmenu-header {

@@ -2,14 +2,12 @@
    RTL + Vazirmatn fixes for Bootstrap SB-Admin-2 dashboard
    Author: Hermes Agent
    Date:   2026-08-31
+
+   Fixes text overflow/clipping caused by Vazirmatn being wider
+   than English at same font-size, combined with RTL layout.
    ============================================================ */
 
-/* --- 1. Remove Nunito override in RTL pages ---
-   The Nunito Google Font link is still loaded in <heade>
-   but Vazirmatn should be the primary body font.
-   These extra !important rules force Vazirmatn on all key elements
-   so that any leftover Nunito rules don't cause English-looking text. */
-
+/* --- 0. Vazirmatn font override on all key elements --- */
 body,
 .btn,
 .navbar-brand .text,
@@ -37,11 +35,149 @@ h1, h2, h3, h4, h5, h6,
     font-family: "Vazirmatn", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
-/* --- 2. Right-side off-canvas menu ---
-   When sidebar collapses (lg breakpoint), the right-menu overlay
-   slides in from the right. This container is positioned fixed and
-   slides in via the .show class. */
+/* --- 1. GLOBAL: Fix text overflow in all nowrap contexts --- */
 
+/* Allow Persian text to wrap inside fixed-width containers */
+.navbar,
+.sidebar,
+.breadcrumb,
+.pagination,
+.brand-icon,
+.card-title,
+.card-subtitle,
+.list-group-item,
+.btn-group,
+.input-group-text,
+.tooltip-inner,
+.popover-inner {
+    word-break: normal;
+    overflow-wrap: break-word;
+    hyphens: none;
+}
+
+/* Navbar brand and toggler - Persian text can be long */
+.navbar-brand,
+.navbar-brand .text,
+.navbar-toggler-icon {
+    white-space: normal;
+    overflow: visible;
+    word-break: break-word;
+    max-width: 100%;
+}
+
+/* Breadcrumb - long Persian paths overflow */
+.breadcrumb {
+    white-space: normal;
+    overflow: visible;
+    word-break: break-word;
+}
+
+.breadcrumb-item {
+    white-space: normal;
+    overflow: visible;
+}
+
+/* Sidebar navigation links - allow wrapping, remove fixed width constraints */
+.sidebar .nav-link {
+    white-space: normal;
+    overflow: visible;
+    word-break: break-word;
+    line-height: 1.8;
+    padding: 0.75rem 1rem;
+}
+
+.sidebar-heading {
+    white-space: normal;
+    overflow: visible;
+    word-break: normal;
+}
+
+/* Card headers and titles - allow text to wrap naturally */
+.card-header,
+.card-title,
+.card-subtitle,
+.card-text {
+    white-space: normal;
+    overflow: visible;
+    word-break: break-word;
+}
+
+/* Tables with Persian content */
+.table {
+    word-break: normal;
+    overflow-wrap: break-word;
+}
+
+.table td,
+.table th {
+    word-break: break-word;
+    overflow-wrap: break-word;
+    vertical-align: middle;
+}
+
+/* Badges with Persian text */
+.badge {
+    white-space: normal;
+    overflow: visible;
+    word-break: break-word;
+}
+
+/* Dropdown menus - Persian text shouldn't be cut off */
+.dropdown-menu {
+    word-break: break-word;
+    min-width: 100px;
+}
+
+/* Pagination */
+.page-link,
+.pagination .page-item {
+    white-space: normal;
+    overflow: visible;
+}
+
+/* Form labels and inputs */
+.form-label,
+.form-control,
+.form-select {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Nav tabs and pills */
+.nav-tabs,
+.nav-pills,
+.nav-item {
+    white-space: normal;
+    overflow: visible;
+}
+
+/* Button groups */
+.btn-group,
+.btn {
+    white-space: normal;
+    word-break: break-word;
+}
+
+/* Alerts */
+.alert {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Lead text and page headers */
+.lead,
+.page-header,
+h1, h2, h3, h4, h5, h6 {
+    word-break: break-word;
+    overflow-wrap: break-word;
+}
+
+/* Footer */
+.footer {
+    word-break: break-word;
+}
+
+/* --- 2. RIGHT-SIDE OFFCANVAS MENU --- */
 .offcanvas-rightmenu {
     position: fixed;
     top: 0;
@@ -60,7 +196,6 @@ h1, h2, h3, h4, h5, h6,
     transform: translateX(0);
 }
 
-/* The dark overlay behind the right menu */
 .offcanvas-backdrop {
     position: fixed;
     top: 0;
@@ -79,16 +214,18 @@ h1, h2, h3, h4, h5, h6,
     pointer-events: auto;
 }
 
-/* Improve readability of right-menu Persian labels */
+/* Fix: remove nowrap+ellipsis from right menu labels so Persian text
+   isn't clipped. Allow long labels to wrap to two lines instead. */
 .offcanvas-rightmenu .menu-label {
     display: block;
     padding: 12px 16px;
     font-size: 0.9rem;
     color: #adb5bd;
     transition: background 0.15s ease, color 0.15s ease;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
+    white-space: normal;
+    overflow: visible;
+    word-break: break-word;
+    line-height: 1.6;
 }
 
 .offcanvas-rightmenu .menu-label:hover {
@@ -109,9 +246,11 @@ h1, h2, h3, h4, h5, h6,
     color: #6c757d;
     padding: 16px 16px 4px;
     font-weight: 600;
+    white-space: normal;
+    overflow: visible;
 }
 
-/* --- 3. Custom scrollbar so it doesn't overlap content in RTL --- */
+/* --- 3. SCROLLBAR (RTL-aware) --- */
 html {
     overflow-y: scroll;
 }
@@ -121,13 +260,11 @@ body {
     scrollbar-color: rgba(0,0,0,0.3) transparent;
 }
 
-/* For Firefox */
 body {
     scrollbar-width: 8px;
     scrollbar-color: rgba(0,0,0,0.3) rgba(0,0,0,0.05);
 }
 
-/* For Webkit browsers (Chrome, Edge, Safari) */
 ::-webkit-scrollbar {
     width: 8px;
     height: 8px;
@@ -146,16 +283,13 @@ body {
     background: rgba(0,0,0,0.5);
 }
 
-/* In RTL mode, scrollbar should appear on the left side.
-   Modern browsers do this automatically for RTL pages,
-   but older ones may need explicit direction. */
 html[dir="rtl"] ::-webkit-scrollbar {
     direction: rtl;
 }
 
-/* --- 4. Ensure content doesn't get hidden behind fixed header --- */
+/* --- 4. BODY PADDING (fixed header offset) --- */
 body {
-    padding-top: 56px; /* typical navbar height */
+    padding-top: 56px;
 }
 
 @media (max-width: 991px) {
@@ -164,20 +298,17 @@ body {
     }
 }
 
-
-/* Prevent body scroll when right menu is open */
 body.right-menu-open {
     overflow: hidden;
 }
 
-/* Ensure right-menu nav-link items use Vazirmatn */
+/* --- 5. RIGHT MENU VAZIRMATTN + LAYOUT --- */
 .offcanvas-rightmenu .menu-label,
 .offcanvas-rightmenu .menu-section-label,
 .offcanvas-rightmenu-header h5 {
     font-family: "Vazirmatn", "Segoe UI", Tahoma, Geneva, Verdana, sans-serif !important;
 }
 
-/* Right menu close button hover */
 .offcanvas-rightmenu-header {
     display: flex;
     align-items: center;
@@ -195,4 +326,65 @@ body.right-menu-open {
 
 .offcanvas-rightmenu-close:hover {
     color: #fff;
+}
+
+/* --- 6. SIDEBAR COLLAPSE AREA --- */
+@media (min-width: 992px) {
+    .sidebar .nav-link {
+        white-space: normal;
+        word-break: break-word;
+        overflow: visible;
+    }
+    
+    .sidebar-heading {
+        white-space: normal;
+        overflow: visible;
+    }
+}
+
+/* --- 7. STATUS BAR / BOTTOM BAR (if present) --- */
+.status-bar,
+.info-bar,
+.meta-bar {
+    word-break: break-word;
+    white-space: normal;
+    overflow: visible;
+}
+
+/* --- 8. GENERAL RTL HELPERS --- */
+[dir="rtl"] .text-start {
+    text-align: right;
+}
+
+[dir="rtl"] .text-end {
+    text-align: left;
+}
+
+[dir="rtl"] .float-start {
+    float: right;
+}
+
+[dir="rtl"] .float-end {
+    float: left;
+}
+
+[dir="rtl"] .ms-auto {
+    margin-left: auto;
+}
+
+[dir="rtl"] .me-auto {
+    margin-right: auto;
+}
+
+[dir="rtl"] .justify-content-start {
+    justify-content: flex-end;
+}
+
+[dir="rtl"] .justify-content-end {
+    justify-content: flex-start;
+}
+
+[dir="rtl"] .flex-shrink-0 {
+    min-width: 0;
+    word-break: break-word;
 }

@@ -65,7 +65,7 @@ body {
   font-weight: 400;
   line-height: 1.5;
   color: #858796;
-  text-align: left;
+  text-align: right;
   background-color: #fff;
 }
 
@@ -5859,7 +5859,7 @@ a.close.disabled {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  text-align: left;
+  text-align: right;
   text-align: start;
   text-decoration: none;
   text-shadow: none;
@@ -5972,7 +5972,7 @@ a.close.disabled {
   font-style: normal;
   font-weight: 400;
   line-height: 1.5;
-  text-align: left;
+  text-align: right;
   text-align: start;
   text-decoration: none;
   text-shadow: none;

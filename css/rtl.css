@@ -388,3 +388,377 @@ body.right-menu-open {
     min-width: 0;
     word-break: break-word;
 }
+
+/* ============================================================
+   CORE RTL LAYOUT OVERRIDES
+   These fix the remaining LTR issues not covered above.
+   ============================================================ */
+
+/* #wrapper: sidebar on right in RTL */
+html[dir="rtl"] #wrapper {
+    flex-direction: row-reverse;
+}
+
+/* Body text-align override */
+html[dir="rtl"] body {
+    text-align: right !important;
+}
+
+/* Scroll-to-top button: move from right to left */
+html[dir="rtl"] .scroll-to-top {
+    right: auto !important;
+    left: 1rem !important;
+}
+
+/* Error 404 animation: position from right instead of left */
+html[dir="rtl"] .error:after {
+    left: auto !important;
+    right: 2px !important;
+}
+
+html[dir="rtl"] .error:before {
+    left: auto !important;
+    right: -2px !important;
+}
+
+/* Sidebar toggle button arrow: margin-right -> margin-left */
+html[dir="rtl"] .sidebar #sidebarToggle::after {
+    margin-right: 0 !important;
+    margin-left: 0.1rem !important;
+}
+
+html[dir="rtl"] .sidebar.toggled #sidebarToggle::after {
+    margin-left: 0 !important;
+    margin-right: 0.25rem !important;
+}
+
+/* Topbar divider: border-right -> border-left */
+html[dir="rtl"] .topbar .topbar-divider {
+    border-right: none !important;
+    border-left: 1px solid #e3e6f0 !important;
+}
+
+/* Topbar dropdown menu: right -> left */
+html[dir="rtl"] .topbar .dropdown .dropdown-menu {
+    right: auto !important;
+    left: 0.75rem !important;
+}
+
+html[dir="rtl"] .topbar .dropdown-list .dropdown-item .status-indicator {
+    right: auto !important;
+    left: 0 !important;
+}
+
+/* Navbar search input: right -> left positioning */
+html[dir="rtl"] .topbar .navbar-search input {
+    text-align: right !important;
+}
+
+/* Sidebar collapse submenu: position from left -> right */
+html[dir="rtl"] .sidebar .nav-item .collapse {
+    left: auto !important;
+    right: calc(6.5rem + 1.5rem / 2) !important;
+}
+
+html[dir="rtl"] .sidebar.toggled .nav-item .collapse {
+    left: auto !important;
+    right: calc(6.5rem + 1.5rem / 2) !important;
+}
+
+/* Card collapse header arrow: right -> left */
+html[dir="rtl"] .card .card-header[data-toggle=collapse]::after {
+    right: auto !important;
+    left: 0 !important;
+    padding-right: 0 !important;
+    padding-left: 1.725rem !important;
+}
+
+html[dir="rtl"] .card .card-header[data-toggle=collapse].collapsed::after {
+    left: 0 !important;
+}
+
+/* Sidebar brand icon: margin-right -> margin-left */
+html[dir="rtl"] .sidebar .sidebar-brand .sidebar-brand-icon i {
+    margin-right: 0 !important;
+    margin-left: 0.5rem !important;
+}
+
+/* Badge counter: top-right -> top-left */
+html[dir="rtl"] .sidebar .nav-item .nav-link .badge-counter,
+html[dir="rtl"] .topbar .nav-item .nav-link .badge-counter {
+    transform-origin: top left !important;
+    right: auto !important;
+    left: 0.25rem !important;
+}
+
+/* Topbar nav-link padding: swap left/right */
+html[dir="rtl"] .topbar .nav-item .nav-link {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
+/* Container padding: swap left/right */
+html[dir="rtl"] .container,
+html[dir="rtl"] .container-fluid,
+html[dir="rtl"] .container-lg,
+html[dir="rtl"] .container-md,
+html[dir="rtl"] .container-sm,
+html[dir="rtl"] .container-xl {
+    padding-left: 1.5rem !important;
+    padding-right: 1.5rem !important;
+}
+
+/* Row gutters: swap margins */
+html[dir="rtl"] .row {
+    margin-left: -0.75rem !important;
+    margin-right: -0.75rem !important;
+}
+
+/* Column padding: swap */
+html[dir="rtl"] .col,
+html[dir="rtl"] .col-1, html[dir="rtl"] .col-2, html[dir="rtl"] .col-3,
+html[dir="rtl"] .col-4, html[dir="rtl"] .col-5, html[dir="rtl"] .col-6,
+html[dir="rtl"] .col-7, html[dir="rtl"] .col-8, html[dir="rtl"] .col-9,
+html[dir="rtl"] .col-10, html[dir="rtl"] .col-11, html[dir="rtl"] .col-12,
+html[dir="rtl"] .col-auto,
+html[dir="rtl"] .col-sm, html[dir="rtl"] .col-md, html[dir="rtl"] .col-lg, html[dir="rtl"] .col-xl {
+    padding-left: 0.75rem !important;
+    padding-right: 0.75rem !important;
+}
+
+/* Offset classes: swap */
+html[dir="rtl"] .offset-1 { margin-left: 0 !important; margin-right: 8.33333% !important; }
+html[dir="rtl"] .offset-2 { margin-left: 0 !important; margin-right: 16.66667% !important; }
+html[dir="rtl"] .offset-3 { margin-left: 0 !important; margin-right: 25% !important; }
+html[dir="rtl"] .offset-4 { margin-left: 0 !important; margin-right: 33.33333% !important; }
+html[dir="rtl"] .offset-5 { margin-left: 0 !important; margin-right: 41.66667% !important; }
+html[dir="rtl"] .offset-6 { margin-left: 0 !important; margin-right: 50% !important; }
+html[dir="rtl"] .offset-7 { margin-left: 0 !important; margin-right: 58.33333% !important; }
+html[dir="rtl"] .offset-8 { margin-left: 0 !important; margin-right: 66.66667% !important; }
+html[dir="rtl"] .offset-9 { margin-left: 0 !important; margin-right: 75% !important; }
+html[dir="rtl"] .offset-10 { margin-left: 0 !important; margin-right: 83.33333% !important; }
+html[dir="rtl"] .offset-11 { margin-left: 0 !important; margin-right: 91.66667% !important; }
+
+html[dir="rtl"] .offset-sm-0 { margin-left: 0 !important; margin-right: 0 !important; }
+html[dir="rtl"] .offset-md-0 { margin-left: 0 !important; margin-right: 0 !important; }
+html[dir="rtl"] .offset-lg-0 { margin-left: 0 !important; margin-right: 0 !important; }
+html[dir="rtl"] .offset-xl-0 { margin-left: 0 !important; margin-right: 0 !important; }
+
+/* Border-left -> border-right for RTL */
+html[dir="rtl"] .border-left-primary { border-left: none !important; border-right: 0.25rem solid #4e73df !important; }
+html[dir="rtl"] .border-left-secondary { border-left: none !important; border-right: 0.25rem solid #858796 !important; }
+html[dir="rtl"] .border-left-success { border-left: none !important; border-right: 0.25rem solid #1cc88a !important; }
+html[dir="rtl"] .border-left-info { border-left: none !important; border-right: 0.25rem solid #36b9cc !important; }
+html[dir="rtl"] .border-left-warning { border-left: none !important; border-right: 0.25rem solid #f6c23e !important; }
+html[dir="rtl"] .border-left-danger { border-left: none !important; border-right: 0.25rem solid #e74a3b !important; }
+html[dir="rtl"] .border-left-light { border-left: none !important; border-right: 0.25rem solid #f8f9fc !important; }
+html[dir="rtl"] .border-left-dark { border-left: none !important; border-right: 0.25rem solid #5a5c69 !important; }
+
+/* Dropdown header text-transform: none for Persian */
+html[dir="rtl"] .dropdown .dropdown-menu .dropdown-header,
+html[dir="rtl"] .sidebar .sidebar-heading {
+    text-transform: none !important;
+}
+
+/* List-inline margin: swap */
+html[dir="rtl"] .list-inline-item:not(:last-child) {
+    margin-left: 0.5rem !important;
+    margin-right: 0 !important;
+}
+
+/* Th text-align */
+html[dir="rtl"] th {
+    text-align: right !important;
+}
+
+/* Stretched-link: keep as-is (it's absolute positioned overlay) */
+
+/* Sidebar dark/light mode heading: fix text-transform */
+html[dir="rtl"] .sidebar-dark .sidebar-heading,
+html[dir="rtl"] .sidebar-light .sidebar-heading {
+    text-transform: none !important;
+}
+
+/* Topbar light navbar-nav link color override */
+html[dir="rtl"] .topbar.navbar-light .navbar-nav .nav-item .nav-link {
+    text-align: right !important;
+}
+
+/* Sidebar card: center items stay centered (they use flexbox) */
+
+/* Table caption */
+html[dir="rtl"] caption {
+    text-align: right !important;
+}
+
+/* List-unstyled: padding-left -> padding-right */
+html[dir="rtl"] .list-unstyled {
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Blockquote: margin swap */
+html[dir="rtl"] blockquote {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Horizontal rule */
+html[dir="rtl"] hr {
+    margin-left: 0 !important;
+    margin-right: 0 !important;
+}
+
+/* Initialism */
+html[dir="rtl"] .initialism {
+    text-transform: none !important;
+}
+
+/* Lead text */
+html[dir="rtl"] .lead {
+    font-size: 1.25rem !important;
+}
+
+/* Mark */
+html[dir="rtl"] .mark {
+    padding: 0.2em !important;
+}
+
+/* Figure caption */
+html[dir="rtl"] .figure-caption {
+    text-align: right !important;
+}
+
+/* Progress */
+html[dir="rtl"] .progress {
+    direction: rtl;
+}
+
+/* Tooltip/popover arrow directions would need JS but CSS can help */
+html[dir="rtl"] .tooltip.show {
+    left: auto !important;
+    right: 0 !important;
+}
+
+/* Sidebar accordion: collapse arrow float direction */
+html[dir="rtl"] .sidebar .nav-item.dropdown .dropdown-toggle::after,
+html[dir="rtl"] .topbar .nav-item.dropdown .dropdown-toggle::after {
+    float: left !important;
+}
+
+html[dir="rtl"] .sidebar .nav-item .nav-link[data-toggle=collapse]::after,
+html[dir="rtl"] .sidebar.toggled .nav-item .nav-link[data-toggle=collapse]::after {
+    float: left !important;
+}
+
+/* Sidebar toggler icon margin in toggled state */
+html[dir="rtl"] .sidebar.toggled #sidebarToggle::after {
+    margin-left: 0.25rem !important;
+    margin-right: 0 !important;
+}
+
+/* ============================================================
+   SIDEBAR TEXT TRUNCATION FIXES
+   The sb-admin-2.min.css sets small font sizes and uppercase
+   for Persian sidebar text, causing clipping. Fix here.
+   ============================================================ */
+
+/* Sidebar heading: remove uppercase, increase font, align right */
+html[dir="rtl"] .sidebar .sidebar-heading {
+    text-transform: none !important;
+    font-size: 0.75rem !important;
+    text-align: right !important;
+    padding: 0.75rem 1rem !important;
+    letter-spacing: normal !important;
+}
+
+/* Sidebar nav-link span on mobile (6.5rem width): allow wrapping, bigger font */
+html[dir="rtl"] .sidebar .nav-item .nav-link span {
+    font-size: 0.8rem !important;
+    white-space: normal !important;
+    display: inline-block !important;
+    overflow: visible !important;
+    text-overflow: clip !important;
+    line-height: 1.4 !important;
+}
+
+/* Sidebar nav-link on desktop (14rem width): ensure text can wrap */
+html[dir="rtl"] @media (min-width: 768px) {
+    .sidebar .nav-item .nav-link {
+        text-align: right !important;
+        width: auto !important;
+        min-width: 14rem !important;
+    }
+    .sidebar .nav-item .nav-link span {
+        font-size: 0.9rem !important;
+        display: inline !important;
+        white-space: normal !important;
+        overflow: visible !important;
+        line-height: 1.4 !important;
+    }
+}
+
+/* Sidebar collapse headers: remove uppercase, allow wrapping */
+html[dir="rtl"] .sidebar .nav-item .collapse .collapse-inner .collapse-header,
+html[dir="rtl"] .sidebar .nav-item .collapsing .collapse-inner .collapse-header {
+    text-transform: none !important;
+    white-space: normal !important;
+    font-size: 0.75rem !important;
+    padding: 0.5rem 1rem !important;
+    letter-spacing: normal !important;
+}
+
+/* Sidebar collapse items: allow wrapping */
+html[dir="rtl"] .sidebar .nav-item .collapse .collapse-inner .collapse-item,
+html[dir="rtl"] .sidebar .nav-item .collapsing .collapse-inner .collapse-item {
+    white-space: normal !important;
+    overflow: visible !important;
+    font-size: 0.85rem !important;
+    padding: 0.5rem 0.75rem !important;
+    line-height: 1.4 !important;
+}
+
+/* Sidebar brand: remove uppercase for Persian */
+html[dir="rtl"] .sidebar .sidebar-brand {
+    text-transform: none !important;
+    letter-spacing: normal !important;
+    text-align: right !important;
+    padding: 1.5rem 1rem !important;
+}
+
+/* Sidebar brand text on desktop */
+html[dir="rtl"] @media (min-width: 768px) {
+    .sidebar .sidebar-brand .sidebar-brand-text {
+        display: inline !important;
+    }
+}
+
+/* Sidebar card text: ensure readability */
+html[dir="rtl"] .sidebar .sidebar-card {
+    font-size: 0.9rem !important;
+    text-align: center !important;
+}
+
+html[dir="rtl"] .sidebar .sidebar-card .sidebar-card-title {
+    font-weight: 700 !important;
+}
+
+html[dir="rtl"] .sidebar .sidebar-card p {
+    font-size: 0.8rem !important;
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* Sidebar toggler: center text-align stays */
+html[dir="rtl"] .sidebar #sidebarToggle {
+    text-align: center !important;
+}
+
+/* Sidebar dark mode heading */
+html[dir="rtl"] .sidebar-dark .sidebar-heading {
+    color: rgba(255,255,255,0.6) !important;
+}
+
+/* Sidebar light mode heading */
+html[dir="rtl"] .sidebar-light .sidebar-heading {
+    color: #6e707e !important;
+}
